@@ -4,9 +4,12 @@ const user_Routes= require ('./routes/userRoutes')
 const cart_Routes= require ('./routes/cartRoutes')
 const product_Routes= require ('./routes/productRoutes')
 const order_Routes= require ('./routes/orderRoutes')
+const cors = require('cors')
+app.use(cors())
 
 const mongoose = require('mongoose')
 app.use(express.json())
+
 
 mongoose.connect(
     'mongodb+srv://kavin:kavin@cluster0.bcclnva.mongodb.net/data'
