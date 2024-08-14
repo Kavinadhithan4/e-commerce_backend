@@ -57,7 +57,7 @@ exports.getCart = async(req , res)=>{
 }
 exports.deletCart = async(req , res)=>{
     
-    const product_id= req.params.id;
+    const {product_id}= req.body;
     const {user_id} = req.user;
     const cart = await Cart.findOne({user_id})
     if (!cart){
