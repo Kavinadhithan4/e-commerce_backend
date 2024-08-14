@@ -5,7 +5,7 @@ const auth=require("../middleware/auth.js")
 
 
 user_router.get("/get",auth, UserController.getUser)
-user_router.post("/create",auth, UserController.createUser)
+user_router.post("/create", UserController.createUser)
 user_router.post("/login", UserController.login)
 
 
